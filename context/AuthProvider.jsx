@@ -1,35 +1,63 @@
-import { createContext, useContext, useEffect, useState } from 'react';
-
+import { createContext, useState, useContext, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import User from '../data/User';
 const AuthContext = createContext();
 
-export function AuthProvider({ children }) {
-  const [user, setUser] = useState(null);
+export const useAuth = () => useContext(AuthContext);
+export const AuthProvider = ({ children }) => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const router = useRouter();
 
-  // useEffect(() => {
-  //   const storedUser = localStorage.getItem('user');
-  //   if (storedUser) {
-  //     setUser(JSON.parse(storedUser));
-  //   }
-  // }, []);
+  function getUserFromLocalStorage() {
+    if (typeof window !== 'undefined') {
+      const userJSON = window.localStorage.getItem('user');
+      return userJSON ? JSON.parse(userJSON) : null;
+    }
+    return null;
+  }
 
-  const login = (userData) => {
+  const [user, setUser] = useState(getUserFromLocalStorage() || null);
 
-    setUser(userData);
-    localStorage.setItem('user', JSON.stringify(userData));
-  };
+  function updateUser(user) {
+    if (typeof window !== 'undefined') {
+      window.localStorage.setItem('user', JSON.stringify(user));
+    }
+    setUser(user);
+  }
 
-  const logout = () => {
-    setUser(null);
-    localStorage.removeItem('user');
-  };
+  function clearUserFromLocalStorage() {
+    if (typeof window !== 'undefined') {
+      window.localStorage.removeItem('user');
+    }
+  }
+
+  function login(userData) {
+    updateUser(userData);
+    setIsLoggedIn(true);
+
+    // Clear user data from local storage after 30 minutes
+    setTimeout(() => {
+      clearUserFromLocalStorage();
+      setIsLoggedIn(false);
+    }, 1800000); // 30 minutes in milliseconds
+
+    router.push('/'); // Redirect to home page after successful login
+  }
+
+  useEffect(() => {
+    let userFromLocalStorage = getUserFromLocalStorage();
+    if (userFromLocalStorage) {
+      setUser(userFromLocalStorage);
+      setIsLoggedIn(true);
+    } else {
+      setIsLoggedIn(false);
+      router.push('/');
+    }
+  }, []);
 
   return (
-    <AuthContext.Provider value={{ user, login, logout }}>
+    <AuthContext.Provider value={{ isLoggedIn, user, login }}>
       {children}
     </AuthContext.Provider>
   );
-}
-
-export function useAuth() {
-  return useContext(AuthContext);
-}
+};

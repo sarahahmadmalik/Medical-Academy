@@ -1,9 +1,24 @@
 import React from 'react';
 import { Form, Input, Button } from 'antd';
-
+import User from '../data/User'
+import {message} from 'antd'
+import {useAuth} from '../context/AuthProvider'
+import { useRouter } from 'next/router';
 function LoginForm() {
+  const auth = useAuth();
+  const router = useRouter();
+
   const onFinish = (values) => {
-    console.log('Form values:', values);
+    if (values.email === User.email && values.password === User.password) {
+      auth.login(auth.user);
+      message.success('Logged in successfully');
+      setTimeout(() => {
+        router.push('/'); 
+      }, 2000); 
+      
+    } else {
+      message.error('Invalid email or password');
+    }
   };
 
   return (
@@ -36,7 +51,7 @@ function LoginForm() {
         </div>
 
         <Form.Item>
-          <Button className="bg-[#D7392B] login-btn py-5  flex w-full items-center justify-center text-white hover:text-white" block>
+          <Button className="bg-[#D7392B] login-btn py-5  flex w-full items-center justify-center text-white hover:text-white" block htmlType="submit">
             Log In
           </Button>
         </Form.Item>
