@@ -1,11 +1,14 @@
-import { Layout, Button, Avatar, Menu, Drawer } from 'antd';
+import { Layout, Button, Avatar, Menu, Dropdown, Drawer } from 'antd';
 import { UserOutlined, MenuOutlined } from '@ant-design/icons';
 import Image from 'next/image';
-import Link from 'next/link'
-import {useState} from 'react';
+import Link from 'next/link';
+import { useState } from 'react';
+import { useAuth } from '../context/AuthProvider'; 
 const { Header } = Layout;
-
 function WebHeader() {
+  const auth = useAuth(); 
+  console.log(auth.user?.firstName)
+
   const [drawerVisible, setDrawerVisible] = useState(false);
 
   const toggleDrawer = () => {
@@ -15,6 +18,13 @@ function WebHeader() {
   const closeDrawer = () => {
     setDrawerVisible(false);
   };
+
+  const profileMenu = (
+    <Menu>
+      <Menu.Item key="User"><Link href="/UserProfile">Profile</Link></Menu.Item>
+      <Menu.Item key="logout" className="menu" onClick={auth.logout}>Logout</Menu.Item>
+    </Menu>
+  );
 
   return (
     <Header className="bg-white px-3 sm:px-auto">
@@ -32,11 +42,29 @@ function WebHeader() {
 
         <div className="hidden sm:block">
          
-          <button  className="flex items-center">Log In
-          
-          <div  className="bg-[#3F93FF1F] p-3 rounded-full ml-2" ><Image src="/images/profile.svg" width={20} height={20} /></div>
+        <div className="hidden sm:block">
+  {auth.isLoggedIn ? (
+    <Dropdown overlay={profileMenu} placement="bottomRight" arrow>
+      <button className="flex items-center">
+        {auth.user && auth.user.firstName} {auth.user && auth.user.lastName}
+        <div  className="p-3 rounded-full ml-1">
+        <Image src="/images/imageProfile.svg" width={40} height={40} alt="userImage" />
+        </div>
+      </button>
+    </Dropdown>
+  ) : (
+    <Link href="/login">
+      <button className="flex items-center">
+        Log In
+        <div className="bg-[#3F93FF1F] p-3 rounded-full ml-2">
+          <Image src="/images/profile.svg" width={20} height={20} alt="login" />
+        </div>
+      </button>
+    </Link>
+  )}
+</div>
+
       
-          </button>
         </div>
         <div className="block sm:hidden">
         <Button

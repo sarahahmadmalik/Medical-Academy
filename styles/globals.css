@@ -30,6 +30,15 @@ html,body{
   border: 1px solid #EB4637 !important;
 }
 
+.update-btn:hover{
+  background: #357EDB !important;
+  border: 1px solid #357EDB !important;
+}
+
+.ant-dropdown-menu-item{
+background: "#1F5689" !important;
+}
+
 .google-btn:hover{
   background: #2C78BF !important;
 }

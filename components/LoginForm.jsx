@@ -4,18 +4,36 @@ import User from '../data/User'
 import {message} from 'antd'
 import {useAuth} from '../context/AuthProvider'
 import { useRouter } from 'next/router';
+import {useState} from 'react'
+
 function LoginForm() {
   const auth = useAuth();
   const router = useRouter();
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+  });
 
-  const onFinish = (values) => {
-    if (values.email === User.email && values.password === User.password) {
-      auth.login(auth.user);
+  const { email, password } = formData;
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+  
+
+  const onFinish = () => {
+    console.log('Form data:', formData);
+  
+    if (email === User.email && password === User.password) {
+      auth.login(User);
       message.success('Logged in successfully');
       setTimeout(() => {
-        router.push('/'); 
-      }, 2000); 
-      
+        router.push('/');
+      }, 2000);
     } else {
       message.error('Invalid email or password');
     }
@@ -33,11 +51,13 @@ function LoginForm() {
         layout="vertical"
       >
         <Form.Item label="Email Address" className="text-[#777777] mb-2" name="email">
-          <Input placeholder="Enter your email" className="border border-[#0000000F] py-2 px-3 " />
+          <Input placeholder="Enter your email" className="border border-[#0000000F] py-2 px-3 " name="email" value={email}
+            onChange={handleChange} />
         </Form.Item>
 
         <Form.Item label="Password" className="text-[#777777] " name="password">
-          <Input.Password className="border border-[#0000000F] py-2 px-3" placeholder="Enter your password" />
+          <Input.Password className="border border-[#0000000F] py-2 px-3" placeholder="Enter your password" name="password"  value={password}
+            onChange={handleChange} />
         </Form.Item>
 
         <Form.Item className="mb-0">
