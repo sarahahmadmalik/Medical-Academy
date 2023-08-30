@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form, Input, Button } from 'antd';
 
-function Login() {
+function LoginForm() {
   const onFinish = (values) => {
     console.log('Form values:', values);
   };
@@ -26,7 +26,7 @@ function Login() {
         </Form.Item>
 
         <Form.Item className="mb-0">
-          <Button className="bg-[#1F5689] py-5  flex w-full items-center justify-center" >
+          <Button className="bg-[#1F5689] google-btn py-5  flex w-full items-center justify-center" >
             Continue with Google
           </Button>
         </Form.Item>
@@ -36,13 +36,14 @@ function Login() {
         </div>
 
         <Form.Item>
-          <Button className="bg-[#D7392B] py-5  flex w-full items-center justify-center text-white hover:text-white" block>
+          <Button className="bg-[#D7392B] login-btn py-5  flex w-full items-center justify-center text-white hover:text-white" block>
             Log In
           </Button>
         </Form.Item>
       </Form>
+      
     </div>
   );
 }
 
-export default Login;
+export default LoginForm;

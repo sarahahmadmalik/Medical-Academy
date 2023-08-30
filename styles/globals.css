@@ -17,6 +17,23 @@ html,body{
   color: #777777 !important;
 }
 
-/* .ant-btn{
-  padding: 0px !important;
-} */
+.ant-btn{
+  color:white !important;
+}
+
+.ant-btn:hover{
+  color:white !important;
+}
+
+.login-btn:hover{
+  background: #EB4637 !important;
+  border: 1px solid #EB4637 !important;
+}
+
+.google-btn:hover{
+  background: #2C78BF !important;
+}
+
+.register-btn:hover{
+  background: #357EDB !important;
+}
