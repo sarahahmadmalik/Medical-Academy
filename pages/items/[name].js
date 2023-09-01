@@ -7,7 +7,9 @@ import { SearchOutlined, CloseCircleOutlined } from '@ant-design/icons';
 import {useRouter} from 'next/router'
 import Data from '@/data/Data'; 
 import ItemCard from '@/components/ItemCard';
-const index = () => {
+import React from 'react';
+
+const Index = () => {
 
 const router = useRouter();
   const { options } = router.query; 
