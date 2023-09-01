@@ -29,6 +29,8 @@ export const AuthProvider = ({ children }) => {
     if (typeof window !== 'undefined') {
       window.localStorage.removeItem('user');
     }
+    setUser(null);
+    setIsLoggedIn(false);
   }
 
   function login(userData) {
@@ -56,7 +58,7 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ isLoggedIn, user, login }}>
+    <AuthContext.Provider value={{ isLoggedIn, user, login, clearUserFromLocalStorage }}>
       {children}
     </AuthContext.Provider>
   );

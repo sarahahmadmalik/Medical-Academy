@@ -8,6 +8,14 @@
   font-family: 'Poppins', sans-serif !important;
 }
 
+.fontPop{
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.picShadow{
+  box-shadow: 0px 4px 15px 0px #00000012 !important;
+}
+
 html,body{
   height: 100vh !important;
   width: 100% !important;
@@ -39,10 +47,27 @@ html,body{
 background: "#1F5689" !important;
 }
 
+
+
+
 .google-btn:hover{
   background: #2C78BF !important;
 }
+.red-radio input[type="radio"]:checked + span {
+  border-color: #D7392B;
+  background-color: #D7392B;
+}
 
+.red-radio:hover input[type="radio"] + span {
+  border-color: #D7392B !important;
+}
+
+.custom-radio input[type="radio"] + span:hover{
+  border-color: #D7392B !important;
+}
+.ant-radio-input:hover{
+  border-color: #D7392B !important;
+}
 .register-btn:hover{
   background: #357EDB !important;
 }

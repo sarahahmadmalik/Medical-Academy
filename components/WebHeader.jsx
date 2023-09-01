@@ -5,8 +5,13 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { useAuth } from '../context/AuthProvider'; 
 const { Header } = Layout;
+import {message} from 'antd'
+import { useRouter } from 'next/router';
+
 function WebHeader() {
   const auth = useAuth(); 
+  const router = useRouter();
+  const {clearUserFromLocalStorage} = auth
   console.log(auth.user?.firstName)
 
   const [drawerVisible, setDrawerVisible] = useState(false);
@@ -19,10 +24,20 @@ function WebHeader() {
     setDrawerVisible(false);
   };
 
+  const LogOut = () => {
+    clearUserFromLocalStorage();
+    setTimeout(() => {
+      message.info("You have been logged out!");
+    }, 2000);
+
+    router.push("/")
+
+  }
+
   const profileMenu = (
     <Menu>
       <Menu.Item key="User"><Link href="/UserProfile">Profile</Link></Menu.Item>
-      <Menu.Item key="logout" className="menu" onClick={auth.logout}>Logout</Menu.Item>
+      <Menu.Item key="logout" className="menu" onClick={LogOut}>Logout</Menu.Item>
     </Menu>
   );
 
