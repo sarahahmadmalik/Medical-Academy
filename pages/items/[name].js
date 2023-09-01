@@ -120,4 +120,4 @@ const router = useRouter();
   );
 };
 
-export default index;
+export default Index;
