@@ -8,21 +8,25 @@ import {useRouter} from 'next/router'
 import Data from '@/data/Data'; 
 import ItemCard from '@/components/ItemCard';
 import React from 'react';
-
-const Index = () => {
+import Link from 'next/link'
+const Name = () => {
 
 const router = useRouter();
   const { options } = router.query; 
+  console.log(options);
   const [searchText, setSearchText] = useState('');
   const [selectedRadio, setSelectedRadio] = useState('PREP Mode');
   const [selectedOptions, setSelectedOptions] = useState([]);
+  const [selectedData, setSelectedData] = useState({});
 
   const findOptionsByName = (name) => {
     const foundOptions = Data.find((item) => item.name === name);
     if (foundOptions) {
+      setSelectedData(foundOptions)
       setSelectedOptions(foundOptions.options);
     } else {
-      setSelectedOptions([]); 
+      setSelectedOptions([]);
+      setSelectedData({}); 
     }
   };
 
@@ -48,16 +52,13 @@ const router = useRouter();
   };
 
 
-  if (!options) {
-    return <div>Loading...</div>;
-  }
 
   return (
-    <div>
+    <div className="">
        <WebHeader />
-      <main className="w-full h-full flex items-center justify-center">
-        <div className=" py-[6rem] px-4 w-full">
-        <div className="w-full  flex flex-col items-center ">
+      <main className="w-full h-full xxl:h-[100vh] flex items-center xl:items-start justify-center">
+        <div className=" py-[6rem] px-4   w-full">
+        <div className="w-full   flex flex-col items-center ">
         <div className="md:w-[45%] w-full">
           <div className="relative  w-full flex items-center justify-between mb-4">
             <Image
@@ -102,15 +103,21 @@ const router = useRouter();
           </div>
           </div>
           </div>
-          <div className="my-[3rem] h-full flex justify-center w-full  flex-wrap">
-            <div className="flex  flex-wrap">
-        {selectedOptions.map((option) => (
-          <ItemCard
-            key={option.name}
-            option={option}
-            img={`/images/${option.name}.jpg`} // You should adjust the path to your images
-          />
-        ))}
+          <div className="my-[3rem]   flex justify-center w-full   flex-wrap px-6">
+            <div className="flex  sm:w-[90%] w-full flex-wrap">
+            {selectedOptions.map((option, index) => (
+  <Link
+    href={`/items/name/index=${index}&optionName=${option.name}&selectedData=${encodeURIComponent(JSON.stringify(selectedData))}`}
+    key={option.name}
+  >
+    <ItemCard
+      option={option}
+      img={`/images/${option.name}.jpg`}
+    />
+  </Link>
+))}
+
+
         </div>
       </div>
         </div>
@@ -120,4 +127,4 @@ const router = useRouter();
   );
 };
 
-export default Index;
+export default Name;

@@ -78,11 +78,12 @@ const Home = () => {
           </div>
           </div>
           <div className="my-[6rem] flex justify-center space-x-4 w-full">
-            {Data.map((item) => (
-                <Link
-                key={item.name}
-                href={`/items/${item.name}?options=${JSON.stringify(item.name)}`}
-              >
+            {Data.map((item, index) => (
+               <Link
+               key={index}
+               href={`/items/${encodeURIComponent(item.name)}?options=${encodeURIComponent(JSON.stringify(item.name))}`}
+              //  as={`/items/${item.name}?options=${encodeURIComponent(JSON.stringify(item.name))}`}
+             >
               <div
                 key={item.name}
                 style={{ backgroundColor: item.bg }}

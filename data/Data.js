@@ -38,72 +38,84 @@ const Data = [
                     name: "Dr. James Williams",
                     post: "12 Aug 2023",
                     info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                    img: '/images/guide/guide1.svg',
     
                 },
                 {
                     name: "Dr. James Williams",
                     post: "12 Aug 2023",
                     info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                    img: '/images/guide/guide2.svg',
     
                 },
                 {
                     name: "Dr. James Williams",
                     post: "12 Aug 2023",
                     info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                    img: '/images/guide/guide3.svg',
     
                 },
                 {
                     name: "Dr. James Williams",
                     post: "12 Aug 2023",
                     info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                    img: '/images/guide/guide4.svg',
     
                 },
                 {
                     name: "Dr. James Williams",
                     post: "12 Aug 2023",
                     info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                    img: '/images/guide/guide5.svg',
     
                 },
                 {
                     name: "Dr. James Williams",
                     post: "12 Aug 2023",
                     info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                    img: '/images/guide/guide6.svg',
     
                 },
                 {
                     name: "Dr. James Williams",
                     post: "12 Aug 2023",
                     info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                    img: '/images/guide/guide7.svg',
     
                 },
                 {
                     name: "Dr. James Williams",
                     post: "12 Aug 2023",
                     info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                    img: '/images/guide/guide8.svg',
     
                 },
                 {
                     name: "Dr. James Williams",
                     post: "12 Aug 2023",
                     info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                    img: '/images/guide/guide9.svg',
     
                 },
                 {
                     name: "Dr. James Williams",
                     post: "12 Aug 2023",
                     info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                    img: '/images/guide/guide10.svg',
     
                 },
                 {
                     name: "Dr. James Williams",
                     post: "12 Aug 2023",
                     info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                    img: '/images/guide/guide11.svg',
     
                 },
                 {
                     name: "Dr. James Williams",
                     post: "12 Aug 2023",
                     info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                    img: '/images/guide/guide12.svg',
     
                 },
             ],
@@ -173,79 +185,91 @@ const Data = [
                 name: "Guidlines",
                 img: '/images/options/guide.svg',
                 guides: [
-                     {
-                        name: "Dr. James Williams",
-                        post: "12 Aug 2023",
-                        info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-        
-                    },
                     {
-                        name: "Dr. James Williams",
-                        post: "12 Aug 2023",
-                        info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-        
-                    },
-                    {
-                        name: "Dr. James Williams",
-                        post: "12 Aug 2023",
-                        info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-        
-                    },
-                    {
-                        name: "Dr. James Williams",
-                        post: "12 Aug 2023",
-                        info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-        
-                    },
-                    {
-                        name: "Dr. James Williams",
-                        post: "12 Aug 2023",
-                        info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-        
-                    },
-                    {
-                        name: "Dr. James Williams",
-                        post: "12 Aug 2023",
-                        info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-        
-                    },
-                    {
-                        name: "Dr. James Williams",
-                        post: "12 Aug 2023",
-                        info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-        
-                    },
-                    {
-                        name: "Dr. James Williams",
-                        post: "12 Aug 2023",
-                        info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-        
-                    },
-                    {
-                        name: "Dr. James Williams",
-                        post: "12 Aug 2023",
-                        info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-        
-                    },
-                    {
-                        name: "Dr. James Williams",
-                        post: "12 Aug 2023",
-                        info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-        
-                    },
-                    {
-                        name: "Dr. James Williams",
-                        post: "12 Aug 2023",
-                        info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-        
-                    },
-                    {
-                        name: "Dr. James Williams",
-                        post: "12 Aug 2023",
-                        info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-        
-                    },
-                ],
+                       name: "Dr. James Williams",
+                       post: "12 Aug 2023",
+                       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                       img: '/images/guide/guide1.svg',
+       
+                   },
+                   {
+                       name: "Dr. James Williams",
+                       post: "12 Aug 2023",
+                       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                       img: '/images/guide/guide2.svg',
+       
+                   },
+                   {
+                       name: "Dr. James Williams",
+                       post: "12 Aug 2023",
+                       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                       img: '/images/guide/guide3.svg',
+       
+                   },
+                   {
+                       name: "Dr. James Williams",
+                       post: "12 Aug 2023",
+                       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                       img: '/images/guide/guide4.svg',
+       
+                   },
+                   {
+                       name: "Dr. James Williams",
+                       post: "12 Aug 2023",
+                       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                       img: '/images/guide/guide5.svg',
+       
+                   },
+                   {
+                       name: "Dr. James Williams",
+                       post: "12 Aug 2023",
+                       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                       img: '/images/guide/guide6.svg',
+       
+                   },
+                   {
+                       name: "Dr. James Williams",
+                       post: "12 Aug 2023",
+                       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                       img: '/images/guide/guide7.svg',
+       
+                   },
+                   {
+                       name: "Dr. James Williams",
+                       post: "12 Aug 2023",
+                       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                       img: '/images/guide/guide8.svg',
+       
+                   },
+                   {
+                       name: "Dr. James Williams",
+                       post: "12 Aug 2023",
+                       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                       img: '/images/guide/guide9.svg',
+       
+                   },
+                   {
+                       name: "Dr. James Williams",
+                       post: "12 Aug 2023",
+                       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                       img: '/images/guide/guide10.svg',
+       
+                   },
+                   {
+                       name: "Dr. James Williams",
+                       post: "12 Aug 2023",
+                       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                       img: '/images/guide/guide11.svg',
+       
+                   },
+                   {
+                       name: "Dr. James Williams",
+                       post: "12 Aug 2023",
+                       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                       img: '/images/guide/guide12.svg',
+       
+                   },
+               ],
                 bg: "#D9EEE1",
                 
                 
@@ -312,79 +336,91 @@ const Data = [
                 name: "Guidlines",
                 img: '/images/options/guide.svg',
                 guides: [
-                     {
-                        name: "Dr. James Williams",
-                        post: "12 Aug 2023",
-                        info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-        
-                    },
                     {
-                        name: "Dr. James Williams",
-                        post: "12 Aug 2023",
-                        info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-        
-                    },
-                    {
-                        name: "Dr. James Williams",
-                        post: "12 Aug 2023",
-                        info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-        
-                    },
-                    {
-                        name: "Dr. James Williams",
-                        post: "12 Aug 2023",
-                        info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-        
-                    },
-                    {
-                        name: "Dr. James Williams",
-                        post: "12 Aug 2023",
-                        info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-        
-                    },
-                    {
-                        name: "Dr. James Williams",
-                        post: "12 Aug 2023",
-                        info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-        
-                    },
-                    {
-                        name: "Dr. James Williams",
-                        post: "12 Aug 2023",
-                        info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-        
-                    },
-                    {
-                        name: "Dr. James Williams",
-                        post: "12 Aug 2023",
-                        info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-        
-                    },
-                    {
-                        name: "Dr. James Williams",
-                        post: "12 Aug 2023",
-                        info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-        
-                    },
-                    {
-                        name: "Dr. James Williams",
-                        post: "12 Aug 2023",
-                        info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-        
-                    },
-                    {
-                        name: "Dr. James Williams",
-                        post: "12 Aug 2023",
-                        info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-        
-                    },
-                    {
-                        name: "Dr. James Williams",
-                        post: "12 Aug 2023",
-                        info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-        
-                    },
-                ],
+                       name: "Dr. James Williams",
+                       post: "12 Aug 2023",
+                       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                       img: '/images/guide/guide1.svg',
+       
+                   },
+                   {
+                       name: "Dr. James Williams",
+                       post: "12 Aug 2023",
+                       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                       img: '/images/guide/guide2.svg',
+       
+                   },
+                   {
+                       name: "Dr. James Williams",
+                       post: "12 Aug 2023",
+                       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                       img: '/images/guide/guide3.svg',
+       
+                   },
+                   {
+                       name: "Dr. James Williams",
+                       post: "12 Aug 2023",
+                       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                       img: '/images/guide/guide4.svg',
+       
+                   },
+                   {
+                       name: "Dr. James Williams",
+                       post: "12 Aug 2023",
+                       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                       img: '/images/guide/guide5.svg',
+       
+                   },
+                   {
+                       name: "Dr. James Williams",
+                       post: "12 Aug 2023",
+                       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                       img: '/images/guide/guide6.svg',
+       
+                   },
+                   {
+                       name: "Dr. James Williams",
+                       post: "12 Aug 2023",
+                       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                       img: '/images/guide/guide7.svg',
+       
+                   },
+                   {
+                       name: "Dr. James Williams",
+                       post: "12 Aug 2023",
+                       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                       img: '/images/guide/guide8.svg',
+       
+                   },
+                   {
+                       name: "Dr. James Williams",
+                       post: "12 Aug 2023",
+                       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                       img: '/images/guide/guide9.svg',
+       
+                   },
+                   {
+                       name: "Dr. James Williams",
+                       post: "12 Aug 2023",
+                       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                       img: '/images/guide/guide10.svg',
+       
+                   },
+                   {
+                       name: "Dr. James Williams",
+                       post: "12 Aug 2023",
+                       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                       img: '/images/guide/guide11.svg',
+       
+                   },
+                   {
+                       name: "Dr. James Williams",
+                       post: "12 Aug 2023",
+                       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                       img: '/images/guide/guide12.svg',
+       
+                   },
+               ],
                 bg: "#D9EEE1",
                 
                 
