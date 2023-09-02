@@ -131,8 +131,8 @@ const Guide = () => {
                         <p className="text-[#777777]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                     </div>
                     <div className="my-[3rem] h-full  w-full grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-4">
-  {guideData.map((guide) => (
-    <GuideCard key={guide.name} guide={guide}  />
+  {guideData.map((guide, index) => (
+    <GuideCard key={index} guide={guide}  />
   ))}
 </div>
 

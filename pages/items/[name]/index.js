@@ -13,11 +13,11 @@ const Name = () => {
 
 const router = useRouter();
   const { options } = router.query; 
-  console.log(options);
   const [searchText, setSearchText] = useState('');
   const [selectedRadio, setSelectedRadio] = useState('PREP Mode');
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [selectedData, setSelectedData] = useState({});
+  const [optionName, setOptionName] = useState('');
 
   const findOptionsByName = (name) => {
     const foundOptions = Data.find((item) => item.name === name);
@@ -30,11 +30,14 @@ const router = useRouter();
     }
   };
 
+  console.log(optionName)
+
   useEffect(() => {
 
     if (options) {
       const parsedOptions = JSON.parse(options);
       findOptionsByName(parsedOptions);
+    
     }
   });
 
@@ -50,6 +53,27 @@ const router = useRouter();
   const handleRadioChange = (e) => {
     setSelectedRadio(e.target.value);
   };
+
+  function getOptionText(optionName) {
+    switch (optionName) {
+      case 'Subject MCQs':
+        return 'mcqs';
+      case 'Guidlines':
+        return 'guide';
+      case 'Past Papers':
+        return 'papers';
+      case 'Mock Exams':
+        return 'mocks';
+      case 'Flash Cards':
+        return 'cards';
+      case 'Notes':
+        return 'notes';
+      case 'Bookmarked':
+        return 'bookmarks';
+      default:
+        return ''; 
+    }
+  }
 
 
 
@@ -105,17 +129,21 @@ const router = useRouter();
           </div>
           <div className="my-[3rem]   flex justify-center w-full   flex-wrap px-6">
             <div className="flex  sm:w-[90%] w-full flex-wrap">
-            {selectedOptions.map((option, index) => (
-  <Link
-    href={`/items/name/index=${index}&optionName=${option.name}&selectedData=${encodeURIComponent(JSON.stringify(selectedData))}`}
-    key={option.name}
-  >
-    <ItemCard
-      option={option}
-      img={`/images/${option.name}.jpg`}
-    />
-  </Link>
-))}
+            {selectedOptions.map((option, index) => {
+  const optionName = getOptionText(option.name);
+  return (
+    <Link
+      href={`/items/name/${optionName}?index=${index}&optionName=${option.name}&selectedData=${encodeURIComponent(JSON.stringify(selectedData))}`}
+      key={option.name}
+    >
+      <ItemCard
+        option={option}
+        img={`/images/${option.name}.jpg`}
+      />
+    </Link>
+  );
+})}
+
 
 
         </div>

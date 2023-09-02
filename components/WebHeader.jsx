@@ -42,7 +42,7 @@ function WebHeader() {
   );
 
   return (
-    <Header className="bg-white px-3 sm:px-6">
+    <Header className="bg-white px-3 md:px-[3.5rem]">
       <div className="flex sm:items-start items-center justify-between">
       <div className=" items-center hidden sm:flex">
             <Link href="/" className="mr-3"><Image src="/images/facebook.svg" width={10} height={10} alt="facebookLogo" /></Link>
