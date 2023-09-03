@@ -16,133 +16,80 @@ const router = useRouter();
 //   const { options } = router.query; 
 //   const [selectedOptions, setSelectedOptions] = useState([]);
 //   const [selectedData, setSelectedData] = useState({});
+const [selectedRadio, setSelectedRadio] = useState('Speciality wise');
   const [optionName, setOptionName] = useState('');
   const [subjects, setSubjects] = useState([
     {
-        name: "Dentistry",
+        name: "Paediatrics",
         content: "500 Mcqs Covering Denstisty",
         bg: "#96D4D4",
-        img: "/images/subject/dentist.svg",
+        img: "/images/paper.svg",
     },
     {
-        name: "Physiology",
+        name: "Medicines",
         content: "500 Mcqs Covering Denstisty",
         bg: "#D9EEE1",
-        img: "/images/subject/img2.svg",
+        img: "/images/paper.svg",
     },
     {
-        name: "Gross Anatomy",
+        name: "Surgery & Allied",
         content: "500 Mcqs Covering Denstisty",
         bg: "#FFC0C7",
-        img: "/images/subject/img3.svg",
+        img: "/images/paper.svg",
     },
     {
-        name: "Special Pathalogy",
+        name: "Dentistry",
         content: "500 Mcqs Covering Denstisty",
         bg: "#FFC0C7",
-        img: "/images/subject/img4.svg",
+        img: "/images/paper.svg",
     },
     {
-        name: "Gen Pathalogy",
+        name: "Opthalmplogy",
         content: "500 Mcqs Covering Denstisty",
         bg: "#EFE59D9E",
-        img: "/images/subject/img5.svg",
+        img: "/images/paper.svg",
     },
     {
         name: "Neuroscience",
         content: "500 Mcqs Covering Denstisty",
         bg: "#F3ECEA",
-        img: "/images/subject/img6.svg",
+        img: "/images/paper.svg",
     },
     {
-        name: "Gen. Pharmacology",
+        name: "ENT",
         content: "500 Mcqs Covering Denstisty",
         bg: "#D9EEE1",
-        img: "/images/subject/img7.svg",
+        img: "/images/paper.svg",
     },
     {
-        name: "Microbiology",
+        name: "Obs & Gyane",
         content: "500 Mcqs Covering Denstisty",
         bg: "#FFC0C7",
-        img: "/images/subject/img8.svg",
+        img: "/images/paper.svg",
     },
     {
-        name: "Biochemistry",
+        name: "Anesthesia",
         content: "500 Mcqs Covering Denstisty",
         bg: "#F3ECEA",
-        img: "/images/subject/img2.svg",
+        img: "/images/paper.svg",
     },
     {
-        name: "Medicines",
+        name: "Radiology",
         content: "500 Mcqs Covering Denstisty",
         bg: "#EFE59D9E",
-        img: "/images/subject/img2.svg",
+        img: "/images/paper.svg",
     },
     {
-        name: "Embryology",
+        name: "Pathalogy",
         content: "500 Mcqs Covering Denstisty",
         bg: "#F3ECEA",
-        img: "/images/subject/img3.svg",
+        img: "/images/paper.svg",
     },
     {
-        name: "Gen. Surgery",
+        name: "Community Medicine",
         content: "500 Mcqs Covering Denstisty",
         bg: "#96D4D4",
-        img: "/images/subject/img4.svg",
-    },
-    {
-        name: "Sp. Surgery",
-        content: "500 Mcqs Covering Denstisty",
-        bg: "#F3ECEA",
-        img: "/images/subject/img4.svg",
-    },
-    {
-        name: "Paediatrics",
-        content: "500 Mcqs Covering Denstisty",
-        bg: "#EFE59D9E",
-        img: "/images/subject/img6.svg",
-    },
-    {
-        name: "Histology",
-        content: "500 Mcqs Covering Denstisty",
-        bg: "#F3ECEA",
-        img: "/images/subject/img7.svg",
-    },
-    {
-        name: "Biostate",
-        content: "500 Mcqs Covering Denstisty",
-        bg: "#96D4D4",
-        img: "/images/subject/img2.svg",
-    },
-    {
-        name: "Gen Anatomy",
-        content: "500 Mcqs Covering Denstisty",
-        bg: "#F3ECEA",
-        img: "/images/subject/img2.svg",
-    },
-    {
-        name: "Behavioral science",
-        content: "500 Mcqs Covering Denstisty",
-        bg: "#EFE59D9E",
-        img: "/images/subject/img2.svg",
-    },
-    {
-        name: "Behavioral science",
-        content: "500 Mcqs Covering Denstisty",
-        bg: "#EFE59D9E",
-        img: "/images/subject/img3.svg",
-    },
-    {
-        name: "Opthalmology",
-        content: "500 Mcqs Covering Denstisty",
-        bg: "#F3ECEA",
-        img: "/images/subject/img3.svg",
-    },
-    {
-        name: "Gynae",
-        content: "500 Mcqs Covering Denstisty",
-        bg: "#96D4D4",
-        img: "/images/subject/img5.svg",
+        img: "/images/paper.svg",
     },
   ])
 
@@ -168,13 +115,34 @@ const router = useRouter();
 //     }
 //   });
 
+const handleRadioChange = (e) => {
+    setSelectedRadio(e.target.value);
+  };
+
+
 
   return (
     <div className="">
        <WebHeader />
       <main className="my-[6rem] w-full h-full xxl:h-[100vh] flex flex-col items-center  xl:justify-start">
-      <div className="text-center w-full">
-                        <h1 className="font-[700] text-[32px]">Select Subject</h1>
+      <div className="text-center flex flex-col justify-center w-full">
+                        <h1 className="font-[700] text-[32px]">Select Past Paper</h1>
+                        <div className="flex justify-center space-x-4 my-4">
+            <Radio.Group onChange={handleRadioChange}  value={selectedRadio}>
+              <Radio
+                value="Speciality wise"
+                className={selectedRadio === 'Speciality wise' ? 'red-radio text-[#043B6282]' : 'text-[#043B6282]'}
+              >
+                Speciality wise
+              </Radio>
+              <Radio
+                value="Date Wise"
+                className={selectedRadio === 'Date Wise' ? 'red-radio text-[#043B6282]' : 'text-[#043B6282]'}
+              >
+                Date Wise
+              </Radio>
+            </Radio.Group>
+          </div>
                     </div>
 
           <div className="my-[3rem]   flex justify-center w-full   flex-wrap px-6">
@@ -183,6 +151,7 @@ const router = useRouter();
   <SubjectCard 
     key={index}
     subject={subject}
+    link ={`/items/name/papers/paper?index=${index}`}
   />
 ))}
       </div>

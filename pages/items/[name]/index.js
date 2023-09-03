@@ -63,9 +63,9 @@ const router = useRouter();
       case 'Past Papers':
         return 'papers';
       case 'Mock Exams':
-        return 'mocks';
+        return 'mock';
       case 'Flash Cards':
-        return 'cards';
+        return 'card';
       case 'Notes':
         return 'notes';
       case 'Bookmarked':

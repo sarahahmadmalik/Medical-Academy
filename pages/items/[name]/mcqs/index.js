@@ -16,80 +16,133 @@ const router = useRouter();
 //   const { options } = router.query; 
 //   const [selectedOptions, setSelectedOptions] = useState([]);
 //   const [selectedData, setSelectedData] = useState({});
-const [selectedRadio, setSelectedRadio] = useState('Speciality wise');
   const [optionName, setOptionName] = useState('');
   const [subjects, setSubjects] = useState([
     {
-        name: "Paediatrics",
-        content: "500 Mcqs Covering Denstisty",
-        bg: "#96D4D4",
-        img: "/images/paper.svg",
-    },
-    {
-        name: "Medicines",
-        content: "500 Mcqs Covering Denstisty",
-        bg: "#D9EEE1",
-        img: "/images/paper.svg",
-    },
-    {
-        name: "Surgery & Allied",
-        content: "500 Mcqs Covering Denstisty",
-        bg: "#FFC0C7",
-        img: "/images/paper.svg",
-    },
-    {
         name: "Dentistry",
         content: "500 Mcqs Covering Denstisty",
-        bg: "#FFC0C7",
-        img: "/images/paper.svg",
+        bg: "#96D4D4",
+        img: "/images/subject/dentist.svg",
     },
     {
-        name: "Opthalmplogy",
+        name: "Physiology",
+        content: "500 Mcqs Covering Denstisty",
+        bg: "#D9EEE1",
+        img: "/images/subject/img2.svg",
+    },
+    {
+        name: "Gross Anatomy",
+        content: "500 Mcqs Covering Denstisty",
+        bg: "#FFC0C7",
+        img: "/images/subject/img3.svg",
+    },
+    {
+        name: "Special Pathalogy",
+        content: "500 Mcqs Covering Denstisty",
+        bg: "#FFC0C7",
+        img: "/images/subject/img4.svg",
+    },
+    {
+        name: "Gen Pathalogy",
         content: "500 Mcqs Covering Denstisty",
         bg: "#EFE59D9E",
-        img: "/images/paper.svg",
+        img: "/images/subject/img5.svg",
     },
     {
         name: "Neuroscience",
         content: "500 Mcqs Covering Denstisty",
         bg: "#F3ECEA",
-        img: "/images/paper.svg",
+        img: "/images/subject/img6.svg",
     },
     {
-        name: "ENT",
+        name: "Gen. Pharmacology",
         content: "500 Mcqs Covering Denstisty",
         bg: "#D9EEE1",
-        img: "/images/paper.svg",
+        img: "/images/subject/img7.svg",
     },
     {
-        name: "Obs & Gyane",
+        name: "Microbiology",
         content: "500 Mcqs Covering Denstisty",
         bg: "#FFC0C7",
-        img: "/images/paper.svg",
+        img: "/images/subject/img8.svg",
     },
     {
-        name: "Anesthesia",
+        name: "Biochemistry",
         content: "500 Mcqs Covering Denstisty",
         bg: "#F3ECEA",
-        img: "/images/paper.svg",
+        img: "/images/subject/img2.svg",
     },
     {
-        name: "Radiology",
+        name: "Medicines",
         content: "500 Mcqs Covering Denstisty",
         bg: "#EFE59D9E",
-        img: "/images/paper.svg",
+        img: "/images/subject/img2.svg",
     },
     {
-        name: "Pathalogy",
+        name: "Embryology",
         content: "500 Mcqs Covering Denstisty",
         bg: "#F3ECEA",
-        img: "/images/paper.svg",
+        img: "/images/subject/img3.svg",
     },
     {
-        name: "Community Medicine",
+        name: "Gen. Surgery",
         content: "500 Mcqs Covering Denstisty",
         bg: "#96D4D4",
-        img: "/images/paper.svg",
+        img: "/images/subject/img4.svg",
+    },
+    {
+        name: "Sp. Surgery",
+        content: "500 Mcqs Covering Denstisty",
+        bg: "#F3ECEA",
+        img: "/images/subject/img4.svg",
+    },
+    {
+        name: "Paediatrics",
+        content: "500 Mcqs Covering Denstisty",
+        bg: "#EFE59D9E",
+        img: "/images/subject/img6.svg",
+    },
+    {
+        name: "Histology",
+        content: "500 Mcqs Covering Denstisty",
+        bg: "#F3ECEA",
+        img: "/images/subject/img7.svg",
+    },
+    {
+        name: "Biostate",
+        content: "500 Mcqs Covering Denstisty",
+        bg: "#96D4D4",
+        img: "/images/subject/img2.svg",
+    },
+    {
+        name: "Gen Anatomy",
+        content: "500 Mcqs Covering Denstisty",
+        bg: "#F3ECEA",
+        img: "/images/subject/img2.svg",
+    },
+    {
+        name: "Behavioral science",
+        content: "500 Mcqs Covering Denstisty",
+        bg: "#EFE59D9E",
+        img: "/images/subject/img2.svg",
+    },
+    {
+        name: "Behavioral science",
+        content: "500 Mcqs Covering Denstisty",
+        bg: "#EFE59D9E",
+        img: "/images/subject/img3.svg",
+    },
+    {
+        name: "Opthalmology",
+        content: "500 Mcqs Covering Denstisty",
+        bg: "#F3ECEA",
+        img: "/images/subject/img3.svg",
+    },
+    {
+        name: "Gynae",
+        content: "500 Mcqs Covering Denstisty",
+        bg: "#96D4D4",
+        img: "/images/subject/img5.svg",
     },
   ])
 
@@ -115,34 +168,13 @@ const [selectedRadio, setSelectedRadio] = useState('Speciality wise');
 //     }
 //   });
 
-const handleRadioChange = (e) => {
-    setSelectedRadio(e.target.value);
-  };
-
-
 
   return (
     <div className="">
        <WebHeader />
       <main className="my-[6rem] w-full h-full xxl:h-[100vh] flex flex-col items-center  xl:justify-start">
       <div className="text-center w-full">
-                        <h1 className="font-[700] text-[32px]">Select Past Paper</h1>
-                        <div className="flex space-x-4">
-            <Radio.Group onChange={handleRadioChange} value={selectedRadio}>
-              <Radio
-                value="Speciality wise"
-                className={selectedRadio === 'Speciality wise' ? 'red-radio text-[#043B6282]' : 'text-[#043B6282]'}
-              >
-                PREP Mode
-              </Radio>
-              <Radio
-                value="Speciality wise"
-                className={selectedRadio === 'Speciality wise' ? 'red-radio text-[#043B6282]' : 'text-[#043B6282]'}
-              >
-                Exam Mode
-              </Radio>
-            </Radio.Group>
-          </div>
+                        <h1 className="font-[700] text-[32px]">Select Subject</h1>
                     </div>
 
           <div className="my-[3rem]   flex justify-center w-full   flex-wrap px-6">
@@ -151,6 +183,7 @@ const handleRadioChange = (e) => {
   <SubjectCard 
     key={index}
     subject={subject}
+    link = {`/items/name/mcqs/unit?index=${index}`}
   />
 ))}
       </div>

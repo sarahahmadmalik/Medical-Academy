@@ -183,6 +183,7 @@ const router = useRouter();
   <SubjectCard 
     key={index}
     subject={subject}
+    link = ''
   />
 ))}
       </div>
