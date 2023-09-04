@@ -158,8 +158,8 @@ export default function Quiz() {
                 <p>{totalQuestions}/100</p>
             </div>
 </div>
-            <div className="bg-white w-[700px] rounded-lg text-black py-5 px-[1.5rem] my-[3rem] shadow-md ">
-                <div className="flex items-center justify-center w-full space-x-6">
+            <div className="bg-white w-[80%] lg:w-[700px] rounded-lg text-black py-5 px-[1.5rem] my-[3rem] shadow-md ">
+                <div className="flex  items-center justify-center w-full space-x-6">
                     <p className="text-[#D7392B]">{wrongAnswers}</p>
                     <Image src="/images/cross.svg" height={14} width={14}/>
                     <div className="w-[45%] bg-[#146B53] h-[13px]"></div>
@@ -171,7 +171,7 @@ export default function Quiz() {
                 </div>
             </div>
             <div className="text-black w-full flex justify-center items-center space-x-6 px-[2rem]">
-            <div className="border border-[#0000001A] w-[200px] rounded-md px-2 flex items-center flex-col">
+            <div className="border border-[#0000001A] w-[200px] rounded-md px-2 hidden lg:flex items-center lg:flex-col">
                     <Image src="/images/portrait.svg" width={140} height={140}/>
                     <div className="flex flex-col items-center text-center">
                         <h1 className="font-[600] my-4">Are you an Enterpreneur?</h1>
@@ -215,7 +215,7 @@ export default function Quiz() {
 
                 </div>
                 </div>
-                <div className="border border-[#0000001A] w-[200px] rounded-md px-2 flex items-center flex-col">
+                <div className="border lg:flex-col lg:flex hidden border-[#0000001A] w-[200px] rounded-md px-2  items-center ">
                     <Image src="/images/portrait.svg" width={140} height={140}/>
                     <div className="flex flex-col items-center text-center">
                         <h1 className="font-[600] my-4">Are you an Enterpreneur?</h1>
