@@ -94,6 +94,11 @@ const handleRadioChange = (e) => {
         onChange={handleSliderChange}
        
       />
+       <Link href="/items/name/mcqs/unit/quiz?"> 
+              <p className="bg-[#D7392B] text-white font-[500] text-[20px] rounded-md px-4 py-2 mt-4 inline-block cursor-pointer">
+                Next
+              </p>
+            </Link>
     </div>
     </div>
 
